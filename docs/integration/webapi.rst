@@ -378,7 +378,7 @@ By default, multiple-style services are appended to the existing set of services
 Per-Controller-Type Service Limitations
 ---------------------------------------
 
-If you are using per-controller-type services, it is not possible to take dependencies on other services that are registered as ``InstancePerRequest()``. The problem is that Web API is caching these services and is not requesting them from the container each time a controller of that type is created. It is most likely not possible for Web API to easily add that support that without introducing the notion of a key (for the controller type) into the DI integration, which would mean that all containers would need to support keyed services.
+If you are using per-controller-type services, it is not possible to take dependencies on other services that are registered as ``InstancePerRequest()``. The problem is that Web API is caching these services and is not requesting them from the container each time a controller of that type is created. It is most likely not possible for Web API to easily add that support without introducing the notion of a key (for the controller type) into the DI integration, which would mean that all containers would need to support keyed services.
 
 Batching
 ========
